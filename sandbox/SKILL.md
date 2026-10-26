@@ -11,7 +11,7 @@ Build a project-specific development sandbox with [Izanagi](https://github.com/i
 
 Inspect the repository before editing. Identify its build and test commands, required toolchains, lockfiles, host platform, existing container files, and whether Izanagi is already configured. Check the current Izanagi documentation and releases rather than assuming flags, configuration keys, image names, or versions.
 
-Ask only when a decision cannot be inferred safely, especially whether the shared project must be writable and which sandbox backend or container runtime is available.
+Determine whether the sandbox is shared project infrastructure or a personal environment tied to one developer's machine. If it may be personal, ask whether Izanagi-related repository files should remain local and be listed in `.git/info/exclude` instead of committed. Do not modify `.git/info/exclude` or assume the files belong in version control without that choice. Also ask when it cannot be inferred safely whether the shared project must be writable or which sandbox backend or container runtime is available.
 
 ## Design the Sandbox
 
@@ -26,7 +26,7 @@ Ask only when a decision cannot be inferred safely, especially whether the share
 
 Produce a complete, operable integration rather than a generic configuration snippet. For a custom-image setup, keep the image, Izanagi configuration, lifecycle commands, project commands, cleanup behavior, and user documentation consistent with one another.
 
-Add only what the project needs. A custom-image setup commonly contains:
+Add only what the project needs. Commit these files only for a project-owned sandbox; for a personal sandbox, create the agreed local files and exclusion patterns instead. A custom-image setup commonly contains:
 
 ```text
 .izanagi/
