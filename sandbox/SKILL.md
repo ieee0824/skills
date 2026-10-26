@@ -5,7 +5,7 @@ description: Create or update a project development sandbox powered by ieee0824/
 
 # Izanagi Project Sandbox
 
-Build a project-specific development sandbox with [Izanagi](https://github.com/ieee0824/izanagi). Use [Temiya](https://github.com/ieee0824/temiya) as a concrete reference, but adapt the result to the target project's language, tools, platform, and trust boundary.
+Build a project-specific development sandbox with [Izanagi](https://github.com/ieee0824/izanagi). Adapt the result to the target project's language, tools, platform, and trust boundary.
 
 ## Discover the Environment
 
