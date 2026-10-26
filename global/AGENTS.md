@@ -3,7 +3,7 @@
 ## Research Before Implementation
 
 - For unfamiliar features, search GitHub for relevant open-source projects before writing code from scratch.
-- Compare multiple implementations to understand established patterns, tradeoffs, and edge cases, then choose an approach that fits this repository.
+- Compare multiple implementations to understand established patterns, tradeoffs, and edge cases, then choose an approach that fits the current project.
 
 ## Boundary Validation
 
