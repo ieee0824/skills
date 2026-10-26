@@ -24,6 +24,8 @@ Ask only when a decision cannot be inferred safely, especially whether the share
 
 ## Create Project Files
 
+Produce a complete, operable integration rather than a generic configuration snippet. For a custom-image setup, keep the image, Izanagi configuration, lifecycle commands, project commands, cleanup behavior, and user documentation consistent with one another.
+
 Add only what the project needs. A custom-image setup commonly contains:
 
 ```text
@@ -34,7 +36,7 @@ scripts/
   sandbox
 ```
 
-Make the helper script a small command dispatcher for relevant operations such as `build-base`, `build`, `up`, `down`, `shell`, `test`, and `logs`. Use the repository's real commands and keep build artifacts inside the guest when practical. Make cleanup idempotent, fail clearly when prerequisites are missing, and avoid embedding machine-specific absolute paths.
+Make the helper script a small command dispatcher for relevant operations such as `build-base`, `build`, `up`, `down`, `shell`, `test`, and `logs`. Each command must perform the real project operation rather than serve as a placeholder. Use the repository's actual commands and keep build artifacts inside the guest when practical. Make cleanup idempotent, fail clearly when prerequisites are missing, and avoid embedding machine-specific absolute paths.
 
 Document installation prerequisites, configuration initialization, the build/start/use/stop flow, shared-path write implications, network behavior, and any credential handoff. Keep generated instructions consistent with the files and commands actually created.
 
